@@ -1,5 +1,8 @@
 # Module 1: Tabular Data
 
+**Team Members:** Allison, Lily, Nick  
+**Course:** ESPM 288
+
 ## Overview
 
 This module explores high-performance workflows for tabular data using `duckdbfs` to work with datasets that are larger than available RAM by leveraging DuckDB's streaming and remote file access capabilities.
@@ -14,16 +17,30 @@ We work with [EXIOBASE 3.8.1](https://source.coop/youssef-harby/exiobase-3), a g
 - **Content**: Economic transactions (Z matrix), final demand (Y matrix), and environmental stressors (F matrix)
 - **Format**: Cloud-optimized Parquet, partitioned by year and matrix type
 
-## Getting Started
+## Files
 
-The main analysis is in `tabular-data.qmd`, which includes:
-- Exercise 1: Connecting to remote data
-- Exercise 2: Efficient filtering and querying
+- `tabular-data.qmd` - Main analysis notebook with exercises
 
-### Requirements
-- R
-- `duckdbfs` package
-- `dplyr` package
+## Setup
 
-## Course
-ESPM 288
+### Prerequisites
+
+- R (version 4.5+)
+- Required packages: `duckdbfs`, `dplyr`
+
+### Installation
+
+```r
+install.packages("duckdbfs")
+install.packages("dplyr")
+```
+
+### Running the Analysis
+
+Open `tabular-data.qmd` in RStudio or another Quarto-compatible editor and run the code chunks.
+
+## Exercises
+
+1. **Connecting to Remote Data** - Access cloud-hosted EXIOBASE data without downloading
+2. **Efficient Filtering** - Query large datasets using lazy evaluation
+3. **Task** - Find top 5 US sectors by CO2 emissions in 2022
